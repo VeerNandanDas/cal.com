@@ -131,11 +131,6 @@ function getEventTypeUrlsForTheChosenRoute({
     reroutingFormResponses,
   });
 
-   if (currentResponse?.participant) {
-    allURLSearchParams.set("name", currentResponse.participant.name);
-    allURLSearchParams.set("email", currentResponse.participant.email);
-  }
-
   const eventFullSlug = substituteVariables(chosenRoute.action.value, currentResponse, formFields);
   const eventBookingAbsoluteUrl = getAbsoluteEventTypeRedirectUrl({
     form,
